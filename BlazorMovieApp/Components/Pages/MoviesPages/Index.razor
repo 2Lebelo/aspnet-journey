@@ -15,8 +15,8 @@
 </p>
 
 <QuickGrid Class="table" Items="context.Movies">
-    <PropertyColumn Property="movies => movies.Title" />
-    <PropertyColumn Property="movies => movies.ReleaseDate" />
+    <PropertyColumn Property="movies => movies.Title" Sortable="true"/>
+    <PropertyColumn Property="movies => movies.ReleaseDate" Title="ReleaseDate" Format="MM/dd/yyyy"/>
     <PropertyColumn Property="movies => movies.Genre" />
     <PropertyColumn Property="movies => movies.Price" />
 
