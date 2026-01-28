@@ -58,15 +58,17 @@ cd BlazorMovieApp
 
 ### 2. Configure Database Connection
 
-Update the connection string in `appsettings.json` if needed:
+The default connection string is already configured in `appsettings.json`. You can update it if needed:
 
 ```json
 {
   "ConnectionStrings": {
-    "BlazorMovieAppContext": "Server=(localdb)\\mssqllocaldb;Database=BlazorMovieAppContext;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "BlazorMovieAppContext": "Server=(localdb)\\mssqllocaldb;Database=BlazorMovieAppContext-2260adf3-e58a-455d-95bf-576a118ede29;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }
 ```
+
+Note: You can change the database name to something simpler if preferred.
 
 ### 3. Apply Database Migrations
 
@@ -176,20 +178,22 @@ builder.Services.AddQuickGridEntityFrameworkAdapter();
 ### Movie Model with Data Annotations
 
 ```csharp
+namespace BlazorMovieApp.Models;
+
 public class Movies
 {
-    public int Id { get; set; }
+    public int Id { set; get; }
     
     [Required]
-    public string? Title { get; set; }
+    public string? Title { set; get; }
     
     [DataType(DataType.Date)]
-    public DateTime? ReleaseDate { get; set; }
+    public DateTime? ReleaseDate { set; get; }
     
-    public string? Genre { get; set; }
+    public string? Genre { set; get; }
     
     [Range(1, 100)]
-    public decimal Price { get; set; }
+    public decimal Price { set; get; }
 }
 ```
 
@@ -200,7 +204,7 @@ The Index page demonstrates QuickGrid usage with sorting and pagination:
 ```razor
 <QuickGrid Class="table" Items="context.Movies" Pagination="state">
     <PropertyColumn Property="movies => movies.Title" Sortable="true"/>
-    <PropertyColumn Property="movies => movies.ReleaseDate" Format="MM/dd/yyyy"/>
+    <PropertyColumn Property="movies => movies.ReleaseDate" Title="ReleaseDate" Format="MM/dd/yyyy"/>
     <!-- Additional columns -->
 </QuickGrid>
 <Paginator State="state"/>
