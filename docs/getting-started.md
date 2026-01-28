@@ -177,9 +177,9 @@ public class ProductsController : ControllerBase
 
 ## Useful Resources
 
-- [ASP.NET Core Documentation](https://docs.microsoft.com/en-us/aspnet/core/)
-- [C# Programming Guide](https://docs.microsoft.com/en-us/dotnet/csharp/)
-- [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+- [ASP.NET Core Documentation](https://learn.microsoft.com/en-us/aspnet/core/)
+- [C# Programming Guide](https://learn.microsoft.com/en-us/dotnet/csharp/)
+- [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/)
 - [ASP.NET Core Tutorials](https://dotnet.microsoft.com/learn/aspnet)
 
 ## Next Steps

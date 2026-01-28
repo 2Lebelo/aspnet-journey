@@ -87,9 +87,9 @@ This is a personal learning repository, but suggestions and feedback are welcome
 
 ## 📖 Resources
 
-- [Official ASP.NET Documentation](https://docs.microsoft.com/en-us/aspnet/core/)
-- [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
-- [C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/)
+- [Official ASP.NET Documentation](https://learn.microsoft.com/en-us/aspnet/core/)
+- [.NET Documentation](https://learn.microsoft.com/en-us/dotnet/)
+- [C# Guide](https://learn.microsoft.com/en-us/dotnet/csharp/)
 
 ## 📄 License
 
